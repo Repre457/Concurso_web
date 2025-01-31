@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monos y sus Costumbres</title>
+    <link rel="stylesheet" href="proyecto.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<body>
+    <header>
+        <h1>EL APASIONANTE MUNDO DE LOS MONOS</h1>
+        <nav>
+            <ul>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="Adicciones.html">Adicciones</a></li>
+                <li><a href="Tipos-de-monos.html">Tipos de monos</a></li>
+                <li><a href="adopta.html">Adopta a un mono</a></li>
+
+
+
+            </ul>
+        </nav>
+    </header>
+    <div class="audio">
+        <h3>¿Quieres un poco de música durante tu visita?</h3>
+        <audio src="musica3.mp3" type="audio/mpeg" controls></audio>
+    </div>
+
+    <main>
+        <section class="encuesta">
+            <h2>¿Qué mono quieres adoptar?</h2>
+            <form id="adoptaForm">
+                <label for="nombre">Tu Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+
+                <label for="email">Tu Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Escribe tu correo" required>
+
+                <label for="mono">Selecciona el tipo de mono que deseas adoptar:</label>
+                <select id="mono" name="mono" required>
+                    <option value="" disabled selected>-- Selecciona un mono --</option>
+                    <option value="Macaco">Macaco</option>
+                    <option value="Narigudo">Narigudo</option>
+                    <option value="Peruano">Peruano</option>
+                    <option value="Orangutan">Oranguntan</option>
+                </select>
+
+                <label for="motivo">¿Por qué quieres adoptar un mono?</label>
+                <textarea id="motivo" name="motivo" rows="4" placeholder="Escribe tu motivo aquí..." required></textarea>
+
+                <button type="submit" id="enviarEncuesta">Enviar</button>
+                
+            </form>
+            <button id="confettiButton">Adoptar </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>SI QUIERES COMPRAR MONOS LLAMA A ESTE TELEFONO 626 93 60 21</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+    const button = document.getElementById('confettiButton');
+    button.addEventListener('click', () => {
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+    });
+</script>
+</body>
