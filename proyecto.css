@@ -101,6 +101,7 @@ footer {
 main.adiccion {
     display: flex;
     flex-wrap: wrap;
+    margin-right: 100px;
 }
 
 main.adiccion div {
